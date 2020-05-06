@@ -4,15 +4,10 @@ title: About
 permalink: /about/
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
+임시 코코넛 블로그 입니다. <br />
+아마도 장고 템플릿을 이해할 즈음에야 블로그가 완성될것 같은데 (언제되려나..) <br />
+그때까지 개발자 블로그로 잠시 사용할 예정입니다.
 
-You can find the source code for Minima at GitHub:
-[jekyll][jekyll-organization] /
-[minima](https://github.com/jekyll/minima)
-
-You can find the source code for Jekyll at GitHub:
-[jekyll][jekyll-organization] /
-[jekyll](https://github.com/jekyll/jekyll)
-
-
-[jekyll-organization]: https://github.com/jekyll
+작성 내용
+ 1. 프로그래밍 공부 과정
+ 2. 개인 웹 개발 프로젝트 적용페이지 (할수 있는 방법 내에서)
