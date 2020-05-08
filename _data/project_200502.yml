@@ -1,9 +1,58 @@
 todolist:
-  -list:
-    -id: 1
-    -title: 자바스크립트 공부하기
-    -name: 홍길동
-    -sequence: 1
-    -type: TODO
-    -regdate: 2020-05-02
+  todo_1: 
+    id: 1
+    title: Study JavaScript
+    name: Hong
+    sequence: 1
+    type: TODO
+    regdate: 2020-05-02
 
+  todo_2:
+    id: 2
+    title: Search JAVA
+    name: Hong
+    sequence: 1
+    type: TODO
+    regdate: 2020-05-02
+
+  todo_3:
+    id: 3
+    title: Study JAVA
+    name: Hong
+    sequence: 1
+    type: TODO
+    regdate: 2020-05-02
+
+  todo_4:
+    id: 4
+    title: Study CSS
+    name: Hong
+    sequence: 1
+    type: TODO
+    regdate: 2020-05-02
+
+  todo_5:
+    id: 5
+    title: Seach WebAPi
+    name: Hong
+    sequence: 1
+    type: TODO
+    regdate: 2020-05-02
+
+doinglist:
+  doing_1: 
+    id: 1
+    title: Write Report
+    name: Hong
+    sequence: 1
+    type: DOING
+    regdate: 2020-05-02
+
+donelist:
+  done_1: 
+    id: 1
+    title: Watch Movie
+    name: Hong
+    sequence: 1
+    type: DONE
+    regdate: 2020-05-02
