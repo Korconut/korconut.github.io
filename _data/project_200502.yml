@@ -1,0 +1,9 @@
+todolist:
+  -list:
+    -id: 1
+    -title: 자바스크립트 공부하기
+    -name: 홍길동
+    -sequence: 1
+    -type: TODO
+    -regdate: 2020-05-02
+

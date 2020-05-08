@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Welcome to Jekyll!"
+title:  "공사중"
 date:   2020-03-22 23:13:51 +0900
-categories: jekyll update
+study: true
 ---

@@ -9,6 +9,10 @@
     {% include header.html %}
 
     <div id="wrapper">
+      {% if page.post-header == true %}
+      {% include post-header.html %}
+      {% endif %}
+    
 
       {{ content }}
 
