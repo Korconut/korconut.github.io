@@ -1,13 +1,13 @@
 ---
 layout: post-write
-title:  "SPRING JDBC"
+title:  "SPRING MVC"
 study: true
 ---
 
-# Spring JDBC
+# Spring MVC
 
 ## 개요
- Database와 연결하는 동작을 도와준다. 
+ 서블릿과 같은 웹 구현을 위한 작업물을 관리하며 도와준다.
  구체적으로 어떤 도움을 주는지 알아보자.
 
 ### Data Access 
