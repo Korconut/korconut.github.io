@@ -1,9 +1,10 @@
 ---
-layout: page
+layout: default
 title: About
 permalink: /about/
 ---
 
+<div class="container">
 임시 코코넛 블로그 입니다. <br/>
 웹 개발을 배워가면서 공부 내용 작성과 더불어 해당 블로그를 적용을 병행합니다. <br/>
 웹개발에 대한 이해를 바탕으로 개인 블로그를 만들기 전까지 개발자 블로그로 잠시 사용할 예정입니다.
@@ -11,3 +12,4 @@ permalink: /about/
 작성 내용
  1. 프로그래밍 공부 과정
  2. 개인 웹 개발 프로젝트 프론트엔드 (할수 있는 방법 내에서)
+ </div>
