@@ -10,7 +10,7 @@ study: true
  서블릿과 같은 웹 구현을 위한 작업물을 관리하며 도와준다.
  구체적으로 어떤 도움을 주는지 알아보자.
 
-### Data Access 
+### WEB
  DataBase와 연결 부분을 도와준다.
 
  `spring-jdbc에서 다루고 있다.`
