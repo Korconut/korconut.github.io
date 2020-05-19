@@ -24,7 +24,7 @@ study: true
  jdbcTemplate.queryForObject : 쿼리 결과를 원하는 객체로 받을 수 있다.
  이때 new Object[]{1212L}를 사용하는 이유를 잘 모르겠다.
 
- NamedparameterJdbcTemplate : jdbcTempate에서 인자를 ?로 받는 대신 파라미터명을 사용하여 작성하는 것을 지원한다. 
+ - NamedparameterJdbcTemplate : jdbcTempate에서 인자를 ?로 받는 대신 파라미터명을 사용하여 작성하는 것을 지원한다. 
   NamedparameterJdbcTemplate 
   - query Method : query(Sql문, 바인딩 할 Parameter를 위한 빈 객체- collection.empty객체, dto에서 가져온 rowMapper)
 
@@ -39,7 +39,11 @@ study: true
   - queryForObject Method : queryForObject(SQL 문 , Map에 parameter와 값을 가진 singletonMap으로 parameter 전달한다. , Dto 객체로 반환하기 위해 RowMapper) 전달된 parameter를 Query문에 바인딩 하여 실행. 이떄 해당 parameter에 값이 없을 경우를 대비(Exception) 
 
 
- SimpleJdbcInsert : insert 쿼리를 생성해준다. dataSource에 객체를 생성할때 whtiTableName에 table명을 넣어주면 생성 되며, 객체 안 execute를 통해 쿼리를 실행한다.
+ - SimpleJdbcInsert : insert 쿼리를 생성해준다. dataSource에 객체를 생성할때 whtiTableName에 table명을 넣어주면 생성 되며, 객체 안 execute를 통해 쿼리를 실행한다. usingGeneratedKeyColumns("파라미터")을 통해 자동으로 파라미터의 값을 가진다.(보통 id) 그리고 excuteAndReturnKey를 통해 반환한다.
+
+ - TransactionManagementConfigurer : 보통 transaction 하기 위해 DBConfig에서 implements 받아 사용한다. 
+   - annotationDrivenTrasactionManager() : transaction을 하기 위해 PlatformTransactionManager의 transactionManager()를 사용하여 DataSourceTransactionManager를 DataSource로 할당시키며, PlatformTransactionManager을 반환한다.
+
 
 
 
