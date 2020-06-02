@@ -84,6 +84,11 @@ study: true
            - @PatchMapping
          
          - @RequestParam : Mapping된 Method의 Argument에 붙일수 있게한다. required는 필수 여부 판단.
+            - defaultValue – This is the default value as a fallback mechanism if request is not having the value or it is empty.
+            - name – Name of the parameter to bind
+            - required – Whether the parameter is mandatory or not. If it is true, failing to send that parameter will fail. 
+            - value – This is an alias for the name attribute
+
          - @PathVariable : 상위 Mapping의 path에 변수명을 받아와 사용할 수 있게 한다.
          - @RequestHeader : 요청정보의 헤더 받아온다.
          - @ModelAttribute : Dto 객체 앞에 붙여서 해당 Dto를 parameter로 사용할 수 있게 해준다.
