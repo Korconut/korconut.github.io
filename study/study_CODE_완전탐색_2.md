@@ -23,4 +23,5 @@ study: true
 
 
 # 문제풀이
+  완전히 Combination 문제이다. 
  

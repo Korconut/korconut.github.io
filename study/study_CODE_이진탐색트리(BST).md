@@ -1,6 +1,6 @@
 ---
 layout: post-write
-title:  "자바스크립트 BST"
+title:  "자바스크립트: 이진탐색트리(BST)"
 study: true
 ---
 
