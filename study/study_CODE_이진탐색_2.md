@@ -1,7 +1,8 @@
 ---
 layout: post-write
-title:  "이분탐색 : 징검다리 건너기"
+title:  "이진탐색 : 징검다리 건너기"
 study: true
+category: 2019 카카오 개발자 겨울 인턴십
 ---
 
 

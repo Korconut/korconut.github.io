@@ -2,6 +2,7 @@
 layout: post-write
 title:  "Combination : 불량 사용자"
 study: true
+category: 2019 카카오 개발자 겨울 인턴십
 ---
 
 

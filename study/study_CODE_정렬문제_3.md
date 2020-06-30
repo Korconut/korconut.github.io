@@ -1,7 +1,8 @@
 ---
 layout: post-write
-title:  "스택 : 크레인 인혀뽑기 게임"
+title:  "정렬 : 튜플"
 study: true
+category: 2019 카카오 개발자 겨울 인턴십
 ---
 
 

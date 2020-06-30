@@ -1,6 +1,6 @@
 ---
 layout: post-write
-title:  "해시 : 완주하지 못한 선수"
+title:  "정렬 : 가장 큰 수"
 study: true
 ---
 

@@ -3,6 +3,13 @@ layout: post-write
 title:  "순열과 조합"
 study: true
 ---
+# 순열과 조합
+ 순열과 조합은 여러 군데에서 쓰인다. 
+  쓰이는 방식도 다양한데, 
+   - 각각의 배열의 값으로써
+   - 조합된 숫자로써
+
+    하지만 설계하는게 쉬운일이 아니기 때문에, 배열로 사용할수 있는 그리고 조합된 숫자를 사용하도록 String으로 사용하는 각각의 함수를 만들어 놓고자 한다.
 
 
 # nPr, nCr 값
@@ -41,12 +48,17 @@ function permutation(n, r) {
   자주 나오는 문제이다. 기능을 추가해서 해결해야할 문제들이니 잘 알아두자. 
 ```javascript
 //list 값은 문자열!
-function findAllPermutation(stringList, prevValue) {
+/**
+* input은 배열, output은 배열의 순열조합으로 이루어진 String
+*/
+var myList = [1, 2, 3, 4];
+var test = findAllPermutation(myList);
+function findAllPermutation(list, prevValue) {
   const frontPaddingValue = prevValue || '';
-  return stringList.reduce((listNumbers, value, index) => {
+  return list.reduce((listNumbers, value, index) => {
     listNumbers.push(frontPaddingValue+value);
 
-    const nextNumberList = [...stringList];
+    const nextNumberList = [...list];
     nextNumberList.splice(index, 1);
 
     const result = findAllPermutation( 
@@ -58,22 +70,54 @@ function findAllPermutation(stringList, prevValue) {
   }, []);
 }
 ```
- 잘 생각해 보자. 배열 내 각각의 요소를 저장한 그 전값과 합쳐주면 된다. 단 각각의 요소를 연선할 때 동일한 조건을 가지도록 해야 한다. (reduce의 강점.)
+ 잘 생각해 보자. 배열 내 각각의 요소를 저장한 그 전값과 합쳐주면 된다. 단 각각의 요소를 연산할 때 동일한 조건을 가지도록 해야 한다. (reduce의 강점.)
   ex [1, 2, 3]
    1을 가지고 들어가서 [2, 3]의 요소와 합쳐준다. 그런 행위를 할때마다 push
 
+```javascript
+/**
+ *  output : 배열
+ * @param {*} inputArr : Input 배열이다. 
+ * 전반적인 매커니즘은 pick에서 하나씩 가지고 재귀함수로 들어간다.
+ */
+
+function permutator(inputArr, rValue) {
+  var results = [];
+  var r = inputArr.length-rValue;
+  
+  function permute(arr, pick) {
+    var cur, pick = pick || [];
+    for (var i = 0; i < arr.length; i++) {
+      cur = arr.splice(i, 1);
+      results.push(pick.concat(cur));
+      permute(arr.slice(), pick.concat(cur));
+      arr.splice(i, 0, cur[0]);
+    }
+    return results;
+  }
+
+  return permute(inputArr);
+}
+
+```
 
 
 # Permutation
 
 ```javascript
-function findPermutation(stringList, rValue) {
+/**
+* 만일 해당 조합을 숫자로 사용할 경우에 쓰도록 output이 String값.
+*/
+var myList = [1, 2, 3, 4];
+var test = findAllPermutation(myList, 4); //4개 조합 ex 1234
+function findPermutation(stringList, rValue) { 
     const len = stringList.length;
-    const startCount = 1;
+    const startCount = 1; //현재 조합을 뽑은 숫자. 재귀로 하나씩 뽑아갈때마다. count가 증가.
 
     function makePermutation(stringList, count, rValue, prevValue) {
-        const frontPaddingValue = prevValue || '';
-        let pivotCount = count;
+        const frontPaddingValue = prevValue || ''; //값이 없을 경우 빈 문자로 초기화
+        let pivotCount = count; //재귀로 들어올때마다 기준 Count를 정함.
+        //reduce 과정에서 count값이 변경되므로 list의 요소가 끝날때 마다 다시 기준 Count를 잡아줌.
         return stringList.reduce( (listNumbers, value, idx) => {
             count = pivotCount;
             if(count === rValue) {
@@ -82,7 +126,8 @@ function findPermutation(stringList, rValue) {
             }
             const nextNumberList = [...stringList];
             nextNumberList.splice(idx, 1);
-            count = 1+len-nextNumberList.length;
+            count++; //아래와 동일
+            //count = 1+len-nextNumberList.length; 
             const result = makePermutation(nextNumberList, count, rValue, frontPaddingValue + value);
             listNumbers.push(...result);
 
@@ -93,6 +138,39 @@ function findPermutation(stringList, rValue) {
 }
 ```
   findAllPermutation에 pivotCount를 지정하여 해당 Count일때의 집합을 저장.
+
+```javascript
+/**
+ * 
+ * @param {*} inputArr : Input 배열이다. 
+ * @param {*} rValue : nPr에서 r이며, 배열의 길이보다 적게 들어와야한다.
+ * 
+ * 전반적인 매커니즘은 pick에서 하나씩 가지고 재귀함수로 들어간다.
+ */
+
+function permutator(inputArr, rValue) {
+  var results = [];
+  var r = inputArr.length-rValue; // 정확히는 arr의 length가 남는 개수에 따라 result값에 push를 한다. 즉 1개를 썼으면 3개가 남았으니까 1개 result.
+  
+  function permute(arr, pick) {
+  
+    var cur, pick = pick || [];
+
+    for (var i = 0; i < arr.length; i++) {
+      cur = arr.splice(i, 1);
+      if (arr.length === r) {
+        results.push(pick.concat(cur));
+      }
+      permute(arr.slice(), pick.concat(cur));
+      arr.splice(i, 0, cur[0]);
+    }
+
+    return results;
+  }
+
+  return permute(inputArr);
+}
+```
 
 
 # Combination

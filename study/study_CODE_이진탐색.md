@@ -158,7 +158,7 @@ var up = upper1Bound(test,0,10,40);
 console.log("lower: " + lo + ",  upper: " + up);
 
 
-function lower1Bound(list, start, end, key) {
+function lowerBound(list, start, end, key) {
   let it;
   let step;
   let advance;
@@ -170,7 +170,7 @@ function lower1Bound(list, start, end, key) {
     step = Math.floor(count/2);
     advance = first+step;
     it = list[advance];
-    if(it < key && it !== undefined) {
+    if(it < key && it !== undefined) { //advance의 값이 0보다 작게 되면 false를 가리켜야 한다. 
       first = ++advance;
       count -= step+1;
     } else {
@@ -180,7 +180,7 @@ function lower1Bound(list, start, end, key) {
   return first;
 }
 
-function upper1Bound(list, start, end, key) {
+function upperBound(list, start, end, key) {
   let it;
   let step;
   let advance;
