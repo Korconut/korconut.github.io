@@ -2,9 +2,9 @@
 layout: post-write
 title:  "연습문제 : 소수찾기"
 study: true
-category: 
----
 
+---
+category: 
 
 # 문제 설명
 

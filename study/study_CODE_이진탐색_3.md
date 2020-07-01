@@ -2,8 +2,8 @@
 layout: post-write
 title: "이진탐색 : 가사 검색"
 study: true
-category: 2020 KAKAO BLIND RECRUITMENT
 ---
+category: 2020 KAKAO BLIND RECRUITMENT
 
 
 # 문제 설명

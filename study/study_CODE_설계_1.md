@@ -2,9 +2,8 @@
 layout: post-write
 title: "설계 : 기둥과 보 설치"
 study: true
-category: 2020 KAKAO BLIND RECRUITMENT
 ---
-
+category: 2020 KAKAO BLIND RECRUITMENT
 
 # 문제 설명
  빙하가 깨지면서 스노우타운에 떠내려 온 죠르디는 인생 2막을 위해 주택 건축사업에 뛰어들기로 결심하였습니다. 죠르디는 기둥과 보를 이용하여 벽면 구조물을 자동으로 세우는 로봇을 개발할 계획인데, 그에 앞서 로봇의 동작을 시뮬레이션 할 수 있는 프로그램을 만들고 있습니다.

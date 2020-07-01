@@ -2,8 +2,8 @@
 layout: post-write
 title:  "해시충돌문제 : 호텔 방 배정"
 study: true
-category: 2019 카카오 개발자 겨울 인턴십
 ---
+category: 2019 카카오 개발자 겨울 인턴십
 
 # 문제 4
 

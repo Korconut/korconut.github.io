@@ -2,8 +2,8 @@
 layout: post-write
 title: "재귀 : 괄호 변환"
 study: true
-category: 2020 KAKAO BLIND RECRUITMENT
 ---
+category: 2020 KAKAO BLIND RECRUITMENT
 
 
 # 문제 설명
