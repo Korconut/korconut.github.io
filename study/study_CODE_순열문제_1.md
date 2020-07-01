@@ -1,7 +1,7 @@
 ---
 layout: post-write
 title: "순열 : 외벽 점검"
-study: false
+study: true
 category: 2020 KAKAO BLIND RECRUITMENT
 ---
 

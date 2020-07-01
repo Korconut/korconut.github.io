@@ -1,7 +1,7 @@
 ---
 layout: post-write
 title: "이진탐색 : 가사 검색"
-study: false
+study: true
 category: 2020 KAKAO BLIND RECRUITMENT
 ---
 

@@ -1,7 +1,7 @@
 ---
 layout: post-write
 title: "완전탐색 : 문자열 압축"
-study: false
+study: true
 category: 2020 KAKAO BLIND RECRUITMENT
 ---
 

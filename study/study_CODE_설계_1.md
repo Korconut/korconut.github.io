@@ -1,7 +1,7 @@
 ---
 layout: post-write
 title: "설계 : 기둥과 보 설치"
-study: false
+study: true
 category: 2020 KAKAO BLIND RECRUITMENT
 ---
 

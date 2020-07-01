@@ -1,7 +1,7 @@
 ---
 layout: post-write
 title: "BFS : 블록 이동하기"
-study: false
+study: true
 category: 2020 KAKAO BLIND RECRUITMENT
 ---
 
