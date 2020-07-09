@@ -180,7 +180,6 @@ function permutator(inputArr, rValue) {
 const getCombinations = (arr, m) => {
     const combinations = [];
     const picked = [];
-    const used = new Array(arr.length).fill(false);
 
     function find(picked) {
         if (picked.length === m) {
@@ -194,10 +193,8 @@ const getCombinations = (arr, m) => {
             let start = picked.length ? picked[picked.length - 1] + 1 : 0;
             for (let i = start; i < arr.length; i++) {
                 picked.push(i);
-                used[i] = 1;
                 find(picked);
                 picked.pop();
-                used[i] = 0;
             }
         }
     }
@@ -268,8 +265,6 @@ const getCombinations = (arr, m) => {
 
 function getCombination(arrays) {
     var answer = {};
-    
-    debugger;
     function makeCombination(i = 0, selected = []) {
         if (!arrays[i]) {
             selected.sort(); //당연히 조합이기 때문에 순서가 다른 같은 값은 중복처리해줘야 한다.
