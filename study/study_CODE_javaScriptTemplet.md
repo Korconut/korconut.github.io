@@ -280,3 +280,11 @@ multiply(5, 2); // 10
 ```javascript
  new Array(n).fill(0).map( () => Array(n).fill(0));
  ```
+
+# 문자열 빼기
+ str은 변경되지 않는다.
+```javascript
+ var str = "abcd";
+ var removeFirst = str.substring(1);
+```
+ 
