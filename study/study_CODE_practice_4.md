@@ -20,16 +20,14 @@ category:
 
 ```javascript
 function enableSkill(skill, skill_tree) {
-    debugger;
     let compare = skill.slice();
-    
     let forUse = skill_tree.slice();
     
     let tree = forUse[0];
     forUse = forUse.substring(1);
     let target = compare[0];
     compare = compare.substring(1);
-    console.log(compare);
+
     while(forUse != '') {
         if(compare.includes(target)) {
             return false;
@@ -55,7 +53,6 @@ function enableSkill(skill, skill_tree) {
 ```javascript
 function solution(skill, skill_trees) {
     var answer = 0;
-    
     skill_trees.forEach( i => {
         if(enableSkill(skill, i)) {
             console.log(i);
@@ -63,18 +60,13 @@ function solution(skill, skill_trees) {
         }    
     })
     return answer;
-    
-
 }
 
 function enableSkill(skill, skill_tree) {
-    debugger;
     let compare = skill.slice();
     let forUse = skill_tree.slice();
-
     let tree = compare[0];
     compare = compare.substring(1);
-    console.log(compare);
 
     for(let i=0, len=forUse.length; i<len; i++) {
         if(compare.includes(forUse[i])) {
@@ -104,7 +96,6 @@ function solution(skill, skill_trees) {
         }
         return true;
     }    
-
     return skill_trees.filter(isCorrect).length;
 }
 ```
